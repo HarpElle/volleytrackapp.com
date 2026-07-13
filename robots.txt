@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://volleytallyapp.com/sitemap.xml
+Sitemap: https://volleytrackapp.com/sitemap.xml
