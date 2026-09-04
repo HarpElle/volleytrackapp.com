@@ -1,0 +1,32 @@
+{
+  "schema": "harpelle-status/1",
+  "repo": "HarpElle/volleytrackapp.com",
+  "name": "volleytrackapp.com",
+  "kind": "Static site",
+  "stage": "live",
+  "health": "idle",
+  "summary": "VolleyTrack prelaunch site from the Claude Design redesign.",
+  "updatedAt": "2026-09-04",
+  "updatedBy": "Claude Code (Fable 5.1)",
+  "current": [
+    "Last change 2026-07-18. One dirty local file."
+  ],
+  "inFlight": [],
+  "blockers": [],
+  "decisions": [],
+  "next": [
+    "Update for store launch after PR #51 and internal testing."
+  ],
+  "later": [],
+  "intentions": "Prelaunch until the app is in the store.",
+  "links": [
+    {
+      "label": "Repo",
+      "url": "https://github.com/HarpElle/volleytrackapp.com"
+    },
+    {
+      "label": "Live",
+      "url": "https://volleytrackapp.com"
+    }
+  ]
+}
