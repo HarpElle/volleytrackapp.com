@@ -26,3 +26,5 @@
   0 blocker(s), 0 decision(s) for Jason.
 - Codex is asked to review this record against its own recent sessions and
   correct anything it knows better.
+
+Reviewed by Codex on 2026-09-04; no corrections.
