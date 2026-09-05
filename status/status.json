@@ -4,21 +4,44 @@
   "name": "volleytrackapp.com",
   "kind": "Static site",
   "stage": "live",
-  "health": "idle",
-  "summary": "VolleyTrack prelaunch site from the Claude Design redesign.",
+  "health": "attention",
+  "summary": "VolleyTrack prelaunch site from the Claude Design redesign. Live and healthy; both forms are mailto-only and need an endpoint or honest copy before the store submission.",
   "updatedAt": "2026-09-04",
-  "updatedBy": "Claude Code (Fable 5.1)",
+  "updatedBy": "Claude Code (Fable 5.1 review)",
   "current": [
-    "Last change 2026-07-18. One dirty local file."
+    "Live on GitHub Pages from main (c25e410), 13 pages, custom 404, HTTPS enforced, Cloudflare in front. All URLs return 200; internal links and assets resolve.",
+    "Prelaunch state baked in: launch-updates CTAs, no store badges, no og:images, one real help article.",
+    "Zero open PRs, one branch, zero Dependabot alerts, no CI.",
+    "Review in status/REVIEW_2026-09-04.md: 0 P0, 3 P1, 7 P2.",
+    "Sweep noted one dirty local file; checkout location not found on the Primary Mac (unverified)."
   ],
   "inFlight": [],
   "blockers": [],
-  "decisions": [],
-  "next": [
-    "Update for store launch after PR #51 and internal testing."
+  "decisions": [
+    "Where do form submissions go? Recommended: a Cloudflare Worker posting to Resend with an origin allowlist and Turnstile; keep the mailto fallback.",
+    "Any analytics at launch? Recommended: no; keep the no-tracking position.",
+    "Keep the unused screenshot derivatives in this repo? Recommended: prune to referenced files plus the two store badges.",
+    "Counsel review of privacy and terms before submission? Recommended: yes, and re-check against the shipped build."
   ],
-  "later": [],
-  "intentions": "Prelaunch until the app is in the store.",
+  "next": [
+    "1. Reword the form confirmations in delete-account.html and download/index.html so the page never claims a request was received (S).",
+    "2. Wire a Cloudflare Worker form endpoint (Resend, origin allowlist, Turnstile) and fetch() it from assets/site.js with mailto fallback (M).",
+    "3. Self-host Archivo and Roboto Mono under assets/fonts/, drop the Google Fonts links and tokens/, add a 'This website' paragraph to the privacy policy (S).",
+    "4. Prune the 141 unreferenced screenshot derivatives and 10 unreferenced top-level images, keeping the two store badges (S).",
+    "5. Prepare the launch flip on a 'launch' branch: store badges, MobileApplication JSON-LD, remove prelaunch copy; leave unmerged until store URLs exist (M).",
+    "6. Publish the four P0 help articles and remove the remaining 'Soon' cards; update sitemap.xml (M).",
+    "7. Produce og:images for / and /spectator-view/ and add og:image and twitter:image meta to every page (S).",
+    "8. Copy pass: replace the 22 em-dashes across 10 pages (S).",
+    "9. Verify the VolleyTally cross-join on iOS and Android release builds or remove the 'or VolleyTally' lines before the launch PR merges (S)."
+  ],
+  "later": [
+    "Fold repeated inline style attributes into assets/site.css classes.",
+    "Add a workflow_dispatch-only lychee link checker.",
+    "Share the form Worker with volleytallyapp.com.",
+    "Retire or rewrite docs/CLAUDE_DESIGN_HANDOFF_REQUIRED.md.",
+    "Counsel review of privacy and terms once a submission date is chosen."
+  ],
+  "intentions": "Prelaunch until the app is in the store. Dependency-free static site with no analytics or tracking.",
   "links": [
     {
       "label": "Repo",
@@ -27,6 +50,10 @@
     {
       "label": "Live",
       "url": "https://volleytrackapp.com"
+    },
+    {
+      "label": "Review 2026-09-04",
+      "url": "https://github.com/HarpElle/volleytrackapp.com/blob/main/status/REVIEW_2026-09-04.md"
     }
   ]
 }
