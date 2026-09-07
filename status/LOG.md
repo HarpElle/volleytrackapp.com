@@ -1,5 +1,9 @@
 # volleytrackapp.com — status log (newest first)
 
+## 2026-09-07 — Claude Code (Fable 5.1)
+
+- Jason accepted every recommended default on 2026-09-07. Moved 4 recommendation(s) to the top of PLAN.md Next as accepted steps and cleared the decision queue.
+
 ## 2026-09-04 — Claude Code (Fable 5.1 review)
 
 - Read-only review of a fresh clone of `main` (`c25e410`): all 13 pages,

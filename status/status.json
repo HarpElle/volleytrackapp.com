@@ -6,8 +6,8 @@
   "stage": "live",
   "health": "attention",
   "summary": "VolleyTrack prelaunch site from the Claude Design redesign. Live and healthy; both forms are mailto-only and need an endpoint or honest copy before the store submission.",
-  "updatedAt": "2026-09-04",
-  "updatedBy": "Claude Code (Fable 5.1 review)",
+  "updatedAt": "2026-09-07",
+  "updatedBy": "Claude Code (Fable 5.1)",
   "current": [
     "Live on GitHub Pages from main (c25e410), 13 pages, custom 404, HTTPS enforced, Cloudflare in front. All URLs return 200; internal links and assets resolve.",
     "Prelaunch state baked in: launch-updates CTAs, no store badges, no og:images, one real help article.",
@@ -17,13 +17,12 @@
   ],
   "inFlight": [],
   "blockers": [],
-  "decisions": [
-    "Where do form submissions go? Recommended: a Cloudflare Worker posting to Resend with an origin allowlist and Turnstile; keep the mailto fallback.",
-    "Any analytics at launch? Recommended: no; keep the no-tracking position.",
-    "Keep the unused screenshot derivatives in this repo? Recommended: prune to referenced files plus the two store badges.",
-    "Counsel review of privacy and terms before submission? Recommended: yes, and re-check against the shipped build."
-  ],
+  "decisions": [],
   "next": [
+    "Accepted 2026-09-07: a Cloudflare Worker posting to Resend with an origin allowlist and Turnstile; keep the mailto fallback (from: Where do form submissions go)",
+    "Accepted 2026-09-07: no; keep the no-tracking position (from: Any analytics at launch)",
+    "Accepted 2026-09-07: prune to referenced files plus the two store badges (from: Keep the unused screenshot derivatives in this repo)",
+    "Accepted 2026-09-07: yes, and re-check against the shipped build (from: Counsel review of privacy and terms before submission)",
     "1. Reword the form confirmations in delete-account.html and download/index.html so the page never claims a request was received (S).",
     "2. Wire a Cloudflare Worker form endpoint (Resend, origin allowlist, Turnstile) and fetch() it from assets/site.js with mailto fallback (M).",
     "3. Self-host Archivo and Roboto Mono under assets/fonts/, drop the Google Fonts links and tokens/, add a 'This website' paragraph to the privacy policy (S).",

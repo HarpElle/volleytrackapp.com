@@ -1,6 +1,6 @@
 # volleytrackapp.com — plan
 
-Updated: 2026-09-04 by Claude Code (Fable 5.1 review)
+Updated: 2026-09-07 by Claude Code (Fable 5.1)
 
 ## Intentions
 
@@ -16,6 +16,10 @@ this; the only third-party call today is Google Fonts, which step 3 removes.)
 
 ## Next (in order)
 
+- Accepted 2026-09-07: a Cloudflare Worker posting to Resend with an origin allowlist and Turnstile; keep the mailto fallback (from: Where do form submissions go)
+- Accepted 2026-09-07: no; keep the no-tracking position (from: Any analytics at launch)
+- Accepted 2026-09-07: prune to referenced files plus the two store badges (from: Keep the unused screenshot derivatives in this repo)
+- Accepted 2026-09-07: yes, and re-check against the shipped build (from: Counsel review of privacy and terms before submission)
 1. **Reword the form confirmations (S).** Files: `delete-account.html`
    (`#del-confirm` panel), `download/index.html` (add a small confirmation
    panel and `data-confirm` attribute), `assets/site.js` (no logic change

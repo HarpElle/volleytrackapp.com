@@ -1,6 +1,6 @@
 # volleytrackapp.com — current state
 
-Updated: 2026-09-04 by Claude Code (Fable 5.1 review)
+Updated: 2026-09-07 by Claude Code (Fable 5.1)
 Stage: **live** · Health: **attention**
 
 VolleyTrack prelaunch site from the Claude Design redesign. Live and healthy;
@@ -29,7 +29,7 @@ store submission. Full review: `status/REVIEW_2026-09-04.md`.
 
 ## Decisions for Jason
 
-- Where do form submissions go? Recommended: a Cloudflare Worker posting to
+- None waiting (queue cleared 2026-09-07; accepted items are at the top of PLAN.md Next).
   Resend with an origin allowlist and Turnstile; keep the mailto fallback.
 - Any analytics at launch? Recommended: no; keep the no-tracking position.
 - Keep the unused screenshot derivatives in this repo? Recommended: prune to
